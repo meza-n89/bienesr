@@ -1,4 +1,4 @@
-/<?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
@@ -18,24 +18,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="<?php echo base_url();?>images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="<?php echo base_url();?>images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php echo base_url();?>/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="<?php echo base_url();?>/images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>/css/bootstrap.min.css">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css">
     <!-- Colors CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>/css/colors.css">
     <!-- ALL VERSION CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>/css/versions.css">
-    <!-- Responsive CSS -->/
+    <!-- Responsive CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>/css/custom.css">
 
     <!-- Modernizer for Portfolio -->
-    <script src="<?php echo base_url();?>js/modernizer.js"></script>
+    <script src="<?php echo base_url();?>/js/modernizer.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -197,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div><!-- end col -->
                 <div class="col-md-3">
                     <div class="post-media wow fadeIn">
-                        <img src="<?php echo base_url();?>uploads/agent.jpg" alt="" class="img-responsive">
+                        <img src="<?php echo base_url();?>/uploads/agent.jpg" alt="" class="img-responsive">
                         <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
                     </div><!-- end media -->
                 </div><!-- end col -->
@@ -222,28 +222,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="top-feature owl-carousel owl-theme">
 					<div class="item">
 						<div class="single-feature">
-							<div class="icon"><img src="<?php echo base_url();?>uploads/icon-01.png" class="img-responsive" alt=""></div>
+							<div class="icon"><img src="<?php echo base_url();?>/uploads/icon-01.png" class="img-responsive" alt=""></div>
 							<h4><a href="#">Full Furnished</a></h4>
 							<p>Mauris eu porta orci. In at erat enim. Suspendisse felis erat, volutpat at nisl sit amet, maximus molestie nisi. </p>
 						</div> 
 					</div>
 					<div class="item">
 						<div class="single-feature">
-							<div class="icon"><img src="<?php echo base_url();?>uploads/icon-02.png" class="img-responsive" alt=""></div>
+							<div class="icon"><img src="<?php echo base_url();?>/uploads/icon-02.png" class="img-responsive" alt=""></div>
 							<h4><a href="#">Living Inside a Nature</a></h4>
 							<p>Mauris eu porta orci. In at erat enim. Suspendisse felis erat, volutpat at nisl sit amet, maximus molestie nisi.</p>
 						</div> 
 					</div>
 					<div class="item">
 						<div class="single-feature">
-							<div class="icon"><img src="<?php echo base_url();?>uploads/icon-03.png" class="img-responsive" alt=""></div>
+							<div class="icon"><img src="<?php echo base_url();?>/uploads/icon-03.png" class="img-responsive" alt=""></div>
 							<h4><a href="#">Luxurious Fittings</a></h4>
 							<p>Mauris eu porta orci. In at erat enim. Suspendisse felis erat, volutpat at nisl sit amet, maximus molestie nisi. </p>
 						</div> 
 					</div>
 					<div class="item">
 						<div class="single-feature">
-							<div class="icon"><img src="<?php echo base_url();?>uploads/icon-04.png" class="img-responsive" alt=""></div>
+							<div class="icon"><img src="<?php echo base_url();?>/uploads/icon-04.png" class="img-responsive" alt=""></div>
 							<h4><a href="#">Non Stop Security</a></h4>
 							<p>Lorem Is a dummy Mauris eu porta orci. In at erat enim. Suspendisse felis erat, volutpat at nisl sit amet, maximus molestie nisi. </p>
 						</div> 
@@ -256,7 +256,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="row">
 				<div class="col-md-6">
                     <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                        <img src="<?php echo base_url();?>uploads/about_bg.jpg" alt="" class="img-responsive">                        
+                        <img src="<?php echo base_url();?>/uploads/about_bg.jpg" alt="" class="img-responsive">                        
                     </div><!-- end media -->
                 </div>
 				<div class="col-md-6">
@@ -294,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_01.png" alt="" class="img-responsive alignleft">
                                 <h4>James Fernando <small>- Manager of Racer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -307,7 +307,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_02.png" alt="" class="img-responsive alignleft">
                                 <h4>Jacques Philips <small>- Designer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -320,7 +320,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_03.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_03.png" alt="" class="img-responsive alignleft">
                                 <h4>Venanda Mercy <small>- Newyork City</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -332,7 +332,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_01.png" alt="" class="img-responsive alignleft">
                                 <h4>James Fernando <small>- Manager of Racer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -345,7 +345,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_02.png" alt="" class="img-responsive alignleft">
                                 <h4>Jacques Philips <small>- Designer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -358,7 +358,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
                             </div>
                             <div class="testi-meta">
-                                <img src="<?php echo base_url();?>uploads/testi_03.png" alt="" class="img-responsive alignleft">
+                                <img src="<?php echo base_url();?>/uploads/testi_03.png" alt="" class="img-responsive alignleft">
                                 <h4>Venanda Mercy <small>- Newyork City</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -375,7 +375,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img src="<?php echo base_url();?>images/logos/logo-realestate.png" alt="">
+                            <img src="<?php echo base_url();?>/images/logos/logo-realestate.png" alt="">
                         </div>
                         <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
                         <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>

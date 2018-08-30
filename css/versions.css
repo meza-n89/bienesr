@@ -28,19 +28,19 @@ body.realestate_version .section-title small,
 body.realestate_version .property-detail i,
 body.realestate_version .customwidget li i,
 body.realestate_version .navbar-nav span {
-    color: #0054a4;
+    color: black;
 }
 
 body.realestate_version .lead strong,
 body.realestate_version .icon-wrapper:hover a,
 body.realestate_version a:hover,
 body.realestate_version a:focus {
-    color: #e11b22
+    color: #a8cf45
 }
 
 body.realestate_version .property-detail i,
 body.realestate_version .property-detail .col-md-3:hover img {
-    border-color: #e11b22;
+    border-color: #a8cf45;
 }
 
 body.realestate_version .btn-light {
@@ -59,7 +59,7 @@ body.realestate_version .nav-pills > li.active > a:hover,
 body.realestate_version .icon-wrapper:hover i,
 body.realestate_version .grd1 {
     color: #ffffff;
-    background: #0054a4;    
+    background: #a8cf45;    
 }
 
 body.realestate_version .icon_wrap,
