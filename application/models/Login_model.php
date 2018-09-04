@@ -16,6 +16,18 @@ public function Verify_users($username,$password){
 	}
 }
 
+public function Verify_user($username){
+	$this->db->where('username',$username);
+	//$this->db->where('password',$password);
+	$query= $this->db->get('usuario');
+
+	if($query->num_rows()>0){
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
 
 }
 

@@ -4,23 +4,23 @@
 <title>Matrix Admin</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/bootstrap.min.css" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/bootstrap-responsive.min.css" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/fullcalendar.css" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/matrix-style.css" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/matrix-media.css" />
-<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-<link rel="stylesheet" href="<?php echo base_url();?>/css/jquery.gritter.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/bootstrap.min.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/fullcalendar.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-style.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-media.css" />
+<link href="<?php echo base_url();?>/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/jquery.gritter.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/scss/bootstrap.css">
 </head>
 <body>
 
-<!--Header-part-->
 <div id="header">
-  <h1><a href="dashboard.html">Matrix Admin</a></h1>
+  <h1><a href="<?php echo base_url();?>/Dashboard/dashboard_view">Matrix Admin</a></h1>
 </div>
 <!--close-Header-part--> 
-
 
 <!--top-Header-menu-->
 <div id="user-nav" class="navbar navbar-inverse">
@@ -31,7 +31,7 @@
         <li class="divider"></li>
         <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
         <li class="divider"></li>
-        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+        <li><a href="<?php echo site_url();?>/Login/logout"><i class="icon-key"></i> Log Out</a></li>
       </ul>
     </li>
     <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
@@ -46,34 +46,36 @@
       </ul>
     </li>
     <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+    <li class=""><a title="" href="<?php echo site_url();?>/Login/logout"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
   </ul>
 </div>
-<!--close-top-Header-menu-->
+
 <!--start-top-serch-->
 <div id="search">
   <input type="text" placeholder="Search here..."/>
   <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
 </div>
-<!--close-top-serch-->
+<!--close-top-serch--> 
+
 <!--sidebar-menu-->
-<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+
+<div id="sidebar"><a href="<?php echo site_url();?>/Dashboard/dashboard_view" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>
-    <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-    <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
-    <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
-    <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-    <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
+    <li class="active"><a href="<?php echo site_url();?>/Dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+    <li> <a href="<?php echo site_url();?>/Dashboard/charts_view"><i class="icon icon-signal"></i> <span>Tablas &amp; graficas</span></a> </li>
+    <li> <a href="widgets.html"><i class="icon-user"></i> <span>Nuevos usuarios</span></a> </li>
+    <li><a href="<?php echo site_url();?>/Dashboard/calendar_view"><i class="icon-calendar"></i> <span>Calendario</span></a></li>
+    <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>???</span></a></li>
+    <li class="submenu"> <a href="<?php echo site_url();?>/Dashboard/propiedades_view?>"><i class="icon icon-home"></i> <span>Propiedades</span> <span class="label label-important">3</span></a>
       <ul>
-        <li><a href="form-common.html">Basic Form</a></li>
-        <li><a href="form-validation.html">Form with Validation</a></li>
-        <li><a href="form-wizard.html">Form with Wizard</a></li>
+        <li><a href="form-common.html">Propiedades en venta</a></li>
+        <li><a href="form-validation.html">Propiedades Vendidas</a></li>
+        <li><a href="form-wizard.html">Propiedades caputradas</a></li>
       </ul>
     </li>
-    <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-    <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
+    <li><a href="<?php echo site_url();?>/Dashboard/catalogo_view"><i class="icon-user"></i> <span>Catalogo de usuarios</span></a></li>
+    <li><a href="<?php echo site_url();?>/Dashboard/registroprop_view"><i class="icon icon-pencil"></i> <span>Registro de propiedades</span></a></li>
+    <!--<li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
       <ul>
         <li><a href="index2.html">Dashboard2</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -81,15 +83,15 @@
         <li><a href="invoice.html">Invoice</a></li>
         <li><a href="chat.html">Chat option</a></li>
       </ul>
-    </li>
-    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
+    </li>-->
+    <!--<li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
       <ul>
         <li><a href="error403.html">Error 403</a></li>
         <li><a href="error404.html">Error 404</a></li>
         <li><a href="error405.html">Error 405</a></li>
         <li><a href="error500.html">Error 500</a></li>
       </ul>
-    </li>
+    </li>-->
     <li class="content"> <span>Monthly Bandwidth Transfer</span>
       <div class="progress progress-mini progress-danger active progress-striped">
         <div style="width: 77%;" class="bar"></div>
@@ -121,15 +123,15 @@
     <div class="quick-actions_homepage">
       <ul class="quick-actions">
         <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
-        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
-        <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>
-        <li class="bg_lo"> <a href="tables.html"> <i class="icon-th"></i> Tables</a> </li>
-        <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>
-        <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
-        <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
-        <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
+        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i>Graficos</a> </li>
+        <!--<li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>-->
+        <li class="bg_lo"> <a href="tables.html"> <i class="icon-user"></i>Usuarios</a> </li>
         <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
-        <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li>
+        <!--<li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>-->
+        <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon icon-home"></i>Propiedades</a> </li>
+        <li class="bg_ls"> <a href="buttons.html"> <i class="icon-user"></i>Cartera de clientes</a> </li>
+        <li class="bg_lb"> <a href="interface.html"> <i class="icon icon-home"></i>Registro de propiedades</a> </li>
+        <li class="bg_lr"> <a href="error404.html"> <i class="mdi-facebook"></i>Facebook</a> </li>
 
       </ul>
     </div>
@@ -148,9 +150,9 @@
             </div>
             <div class="span3">
               <ul class="site-stats">
-                <li class="bg_lh"><i class="icon-user"></i> <strong>2540</strong> <small>Total Users</small></li>
-                <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>New Users </small></li>
-                <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>Total Shop</small></li>
+                <li class="bg_lh"><i class="icon-user"></i> <strong>2540</strong> <small>Total Usuarios</small></li>
+                <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>Usuarios capturados</small></li>
+                <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>Total propiedades vendidas</small></li>
                 <li class="bg_lh"><i class="icon-tag"></i> <strong>9540</strong> <small>Total Orders</small></li>
                 <li class="bg_lh"><i class="icon-repeat"></i> <strong>10</strong> <small>Pending Orders</small></li>
                 <li class="bg_lh"><i class="icon-globe"></i> <strong>8540</strong> <small>Online Orders</small></li>
@@ -177,7 +179,7 @@
                 </div>
               </li>
               <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="<?php echo base_url();?>img/demo/av2.jpg"> </div>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="<?php echo base_url();?>/img/demo/av2.jpg"> </div>
                 <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
                   <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
                 </div>
@@ -415,27 +417,27 @@
 
 <!--end-Footer-part-->
 
-<script src="<?php echo base_url();?>/js/excanvas.min.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.min.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.ui.custom.js"></script> 
-<script src="<?php echo base_url();?>/js/bootstrap.min.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.flot.min.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.flot.resize.min.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.peity.min.js"></script> 
-<script src="<?php echo base_url();?>/js/fullcalendar.min.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.dashboard.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.gritter.min.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.interface.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.chat.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.validate.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.form_validation.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.wizard.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.uniform.js"></script> 
-<script src="<?php echo base_url();?>/js/select2.min.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.popover.js"></script> 
-<script src="<?php echo base_url();?>/js/jquery.dataTables.min.js"></script> 
-<script src="<?php echo base_url();?>/js/matrix.tables.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/excanvas.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.ui.custom.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/bootstrap.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.flot.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.flot.resize.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.peity.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/fullcalendar.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.dashboard.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.gritter.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.interface.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.chat.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.validate.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.form_validation.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.wizard.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.uniform.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/select2.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.popover.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/jquery.dataTables.min.js"></script> 
+<script src="<?php echo base_url();?>/js/dashboard/matrix.tables.js"></script> 
 
 <script type="text/javascript">
   // This function is called from the pop-up menus to transfer to

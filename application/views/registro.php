@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Username:</label><br>
-                                <input type="text" name="username" id="username" class="required">
+                                <input type="text" name="username" id="username" class="required" onblur="validate_username()">
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
@@ -87,6 +87,7 @@ function validate_form()
                 if(data!=0)
                 {
                     alert('Datos ingresados correctamente');
+                    location.href='<?php echo site_url();?>/Registro/login_view';
                 }
                 else
                 {
@@ -96,7 +97,9 @@ function validate_form()
             }
         });
     } 
-    function validate_password(){
+   
+}
+ function validate_password(){
         if($("#password").val()!=$("#password1").val()){
             alert('Passwords no coinciden');
             ("#password").val('');
@@ -104,7 +107,28 @@ function validate_form()
         }
 
     }  //ajax
-}
+    function validate_username()
+    {
+        if($('#username').val()!='')
+        {
+            url='<?php echo site_url()?>/Registro/validate_usreg';
+            $.ajax({
+                type: "POST",                 
+                url: url,                     
+                data: 'username='+$("#username").val(), 
+                success: function(data)             
+                   {
+                        if(data==1)
+                        {
+                            alert('El usuario ya existe');
+                            $('#username').val('');
+                            
+                        }
+                       
+                    }
+            });
+        }
+    }
  
 </script>
         

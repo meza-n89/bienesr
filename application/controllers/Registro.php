@@ -9,7 +9,10 @@ class Registro extends CI_Controller{
 	{   $this->load->helper('url');
 		$this->load->view('registro');
 	}
-      
+      public function login_view(){
+        $this->load->helper('url');
+        $this->load->view('login');
+      }
 
        // 
 
@@ -39,6 +42,23 @@ class Registro extends CI_Controller{
         $this->load->helper('url');
             $this->load->view('registroex');
         }
+
+    public function validate_usreg(){
+    /*$this->load->library('session');
+    $this->load->helper('url');
+    if($this->session->userdata('id')!=NULL)
+    {
+      redirect('Welcome/index');
+    }*/
+    
+    
+    $this->load->model('Login_model','md',true);
+    $username=htmlspecialchars($_POST['username']);
+  
+    $queve=$this->md->Verify_user($username);
+    echo $queve;
+
+  }
         
 }
 ?>

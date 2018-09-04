@@ -6,6 +6,14 @@
 class Login extends CI_controller
 {
 
+		public function dshuser_view(){
+		//if(isset($this->session->set_userdata('id')))
+		
+		
+		$this->load->helper('url');
+		$this->load->view('userdsh/index');
+	
+}
 
 	public function login_view(){
 		//if(isset($this->session->set_userdata('id')))
@@ -13,7 +21,7 @@ class Login extends CI_controller
 		$this->load->library('session');
 		if($this->session->userdata('id')!=NULL)
 		{
-			redirect('Welcome');
+			redirect('dashboard/index');
 		}
 		$this->load->helper('url');
 		$this->load->view('login');
@@ -55,7 +63,13 @@ public function logout(){
 	$this->load->library('session');
 	$this->load->helper('url');
 	$this->session->sess_destroy();
-	header($this->load->view('index'));
+	redirect('/Welcome');
+}
+public function logout_user(){
+	$this->load->library('session');
+	$this->load->helper('url');
+	$this->session->sess_destroy();
+	redirect('/Welcome');
 }
 }
 

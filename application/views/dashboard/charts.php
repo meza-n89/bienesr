@@ -4,18 +4,18 @@
 <title>Matrix Admin</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
-<link rel="stylesheet" href="css/matrix-style.css" />
-<link rel="stylesheet" href="css/matrix-media.css" />
-<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/bootstrap.min.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-style.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-media.css" />
+<link href="<?php echo base_url();?>/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="dashboard.html">Matrix Admin</a></h1>
+  <h1><a href="<?php echo base_url();?>/Dashboard/dashboard_view">Matrix Admin</a></h1>
 </div>
 <!--close-Header-part--> 
 
@@ -56,23 +56,23 @@
 
 <!--sidebar-menu-->
 
-<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-signal"></i> Charts &amp; graphs</a>
+<div id="sidebar"><a href="<?php echo site_url();?>/Dashboard/dashboard_view" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>
-    <li><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-    <li class="active"> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
-    <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
-    <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-    <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
+    <li class="active"><a href="<?php echo site_url();?>/Dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+    <li> <a href="<?php echo site_url();?>/Dashboard/charts_view"><i class="icon icon-signal"></i> <span>Tablas &amp; graficas</span></a> </li>
+    <li> <a href="widgets.html"><i class="icon-user"></i> <span>Nuevos usuarios</span></a> </li>
+    <li><a href="<?php echo site_url();?>/Dashboard/calendar_view"><i class="icon-calendar"></i> <span>Calendario</span></a></li>
+    <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>???</span></a></li>
+    <li class="submenu"> <a href="<?php echo site_url();?>/Dashboard/propiedades_view?>"><i class="icon icon-home"></i> <span>Propiedades</span> <span class="label label-important">3</span></a>
       <ul>
-        <li><a href="form-common.html">Basic Form</a></li>
-        <li><a href="form-validation.html">Form with Validation</a></li>
-        <li><a href="form-wizard.html">Form with Wizard</a></li>
+        <li><a href="form-common.html">Propiedades en venta</a></li>
+        <li><a href="form-validation.html">Propiedades Vendidas</a></li>
+        <li><a href="form-wizard.html">Propiedades caputradas</a></li>
       </ul>
     </li>
-    <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-    <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
+    <li><a href="<?php echo site_url();?>/Dashboard/catalogo_view"><i class="icon-user"></i> <span>Catalogo de usuarios</span></a></li>
+    <li><a href="<?php echo site_url();?>/Dashboard/registroprop_view"><i class="icon icon-pencil"></i> <span>Registro de propiedades</span></a></li>
+    <!--<li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
       <ul>
         <li><a href="index2.html">Dashboard2</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -80,15 +80,15 @@
         <li><a href="invoice.html">Invoice</a></li>
         <li><a href="chat.html">Chat option</a></li>
       </ul>
-    </li>
-    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
+    </li>-->
+    <!--<li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
       <ul>
         <li><a href="error403.html">Error 403</a></li>
         <li><a href="error404.html">Error 404</a></li>
         <li><a href="error405.html">Error 405</a></li>
         <li><a href="error500.html">Error 500</a></li>
       </ul>
-    </li>
+    </li>-->
     <li class="content"> <span>Monthly Bandwidth Transfer</span>
       <div class="progress progress-mini progress-danger active progress-striped">
         <div style="width: 77%;" class="bar"></div>
@@ -113,7 +113,7 @@
   <div class="container-fluid">
     <hr>
     <div class="row-fluid">
-      <div class="span12">
+      <!--<div class="span12">
         <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
             <h5>Real Time chart</h5>
@@ -139,7 +139,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="widget-box widget-plain">
       <div class="center">
         <ul class="stat-boxes2">
@@ -215,14 +215,14 @@
   <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
 </div>
 <!--end-Footer-part-->
-<script src="js/jquery.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/jquery.flot.min.js"></script> 
-<script src="js/jquery.flot.pie.min.js"></script> 
-<script src="js/matrix.charts.js"></script> 
-<script src="js/jquery.flot.resize.min.js"></script> 
-<script src="js/matrix.js"></script> 
-<script src="js/jquery.peity.min.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/jquery.min.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/bootstrap.min.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/jquery.flot.min.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/jquery.flot.pie.min.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/matrix.charts.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/jquery.flot.resize.min.js"></script> <?php echo base_url();?>
+<script src="<?php echo base_url();?>js/dashboard/matrix.js"></script> 
+<script src="<?php echo base_url();?>js/dashboard/jquery.peity.min.js"></script> 
 <!--Real-time-chart-js-->
 <script type="text/javascript">
 $(function () {
@@ -358,6 +358,6 @@ $(function () {
 });
 </script> 
 <!--Turning-series-chart-js-->
-<script src="js/matrix.dashboard.js"></script>
+<script src="/js/dashboard/matrix.dashboard.js"></script>
 </body>
 </html>

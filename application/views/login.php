@@ -6,8 +6,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo base_url();?>css/login.css">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 
-<script src="<?php echo base_url();?>js/jquery.min.js"></script>
+<script src="<?php echo base_url();?>/js/jquery.min.js"></script>
 
 </head>
 <body>
@@ -48,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  <script type="text/javascript">
   function aa()
   {
-       //alert('entró');
+       alert('entró');
         var url = "<?php echo site_url();?>/Login/validate_login";
         $.ajax({                        
            type: "POST",                 
@@ -59,13 +61,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 switch(data)
                 {
                     case '0':
-                        alert('laca');
+                        alert('El usuario o la contraseña es incorrecto');
                     break;
                     case '1':
                         location.href='<?php echo site_url();?>/Dashboard';
                     break;
                     case '2':
-                        location.href='www.google.com';
+                        location.href='<?php echo site_url();?>/Login/dshuser_view';
                     break;
                    
                 }
