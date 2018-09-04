@@ -127,7 +127,7 @@
           <h5>Personal-info</h5>
         </div>
         <div class="widget-content nopadding">
-          <form action="#" method="get" class="form-horizontal">
+          <form action="<?php echo site_url();?>/Dash_regprop/Insert_prop" method="post" class="form-horizontal">
             <div class="control-group">
               <label class="control-label">Nombre de la propiedad :</label>
               <div class="controls">
@@ -192,7 +192,7 @@
               </div>
             </div>
             <div class="form-actions">
-              <button type="submit" class="btn btn-success">Save</button>
+              <input type="submit" class="btn btn-success" value="Save">
             </div>
           </form>
         </div>
@@ -217,8 +217,7 @@
 <script src="<?php echo base_url();?>js/dashboard/jquery.uniform.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/select2.min.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/matrix.js"></script> 
-<script src="<?php echo base_url();?>js/dashboard/matrix.form_common.js"></script> 
-<script src="<?php echo base_url();?>js/dashboard/wysihtml5-0.3.0.js"></script> 
+<!--<script src="<?php echo base_url();?>js/dashboard/wysihtml5-0.3.0.js"></script>--> 
 <script src="<?php echo base_url();?>js/dashboard/jquery.peity.min.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/bootstrap-wysihtml5.js"></script> 
 <script>

@@ -14,8 +14,9 @@ public function insert_propiedad($nombre,$tipo_prop,$area,$habitaciones,$direcci
 'direccion'=>$direccion,
 'ubicacion'=>$ubicacion,
 'img_galeria'=>$img,
-'img_galeria2'=>$img,
-'img_galeria3'=>$img
+'img_galeria2'=>$img2,
+'img_galeria3'=>$img3,
+'id_usuario'=> NULL
 );
 	return $this->db->insert('propiedades',$data);
 }

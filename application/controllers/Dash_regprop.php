@@ -5,7 +5,7 @@ class Dash_regprop extends CI_controller
 {
 	$this->load->helper('url');
 	$this->load->model('Model_dashregprop','MoD',true);
-	$this->MoD->Insert_prop(
+	$this->MoD->insert_propiedad(
 		$this->input->post("nombre"),
 		$this->input->post("area"),
 		$this->input->post("habitaciones"),
@@ -14,8 +14,8 @@ class Dash_regprop extends CI_controller
 		$this->input->post("tipo"),
 		$this->input->post("img"),
 		$this->input->post("img2"),
-		$this->input->post("img3"),
-);
+		$this->input->post("img3")
+	);
 
 }
 }
