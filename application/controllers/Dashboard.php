@@ -44,7 +44,9 @@ public function catalogo_view(){
 }
 public function registroprop_view(){
 	$this->load->helper('url');
-	$this->load->view('dashboard/form-common');
+	$this->load->model('Model_show','md',true);
+	$data['query']=$this->md->show_prop();
+	$this->load->view('dashboard/form-common',$data);
 }
 
 }

@@ -127,7 +127,7 @@
           <h5>Personal-info</h5>
         </div>
         <div class="widget-content nopadding">
-          <form action="<?php echo site_url();?>/Dash_regprop/Insert_prop" method="post" class="form-horizontal">
+          <form action="<?php echo site_url();?>/Dash_regprop/Insert_prop" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="control-group">
               <label class="control-label">Nombre de la propiedad :</label>
               <div class="controls">
@@ -143,7 +143,7 @@
             <div class="control-group">
               <label class="control-label">Habitaciones :</label>
               <div class="controls">
-                <input type="password" name="habitaciones"  class="span11" placeholder="Numero de habitaciones :"  />
+                <input type="text" name="habitaciones"  class="span11" placeholder="Numero de habitaciones :"  />
               </div>
             </div>
             <div class="control-group">
@@ -176,19 +176,19 @@
                <div class="control-group">
               <label class="control-label">Imagen 1</label>
               <div class="controls">
-                <input type="file" name="img" />
+                <input type="file" name="userfile" />
               </div>
             </div>
                   <div class="control-group">
               <label class="control-label">Imagen 2</label>
               <div class="controls">
-                <input type="file" name="img2" />
+                <input type="file" name="userfile1" />
               </div>
             </div>
                   <div class="control-group">
               <label class="control-label">Imagen 3</label>
               <div class="controls">
-                <input type="file" name="img3" />
+                <input type="file" name="userfile2" />
               </div>
             </div>
             <div class="form-actions">
@@ -198,10 +198,55 @@
         </div>
       </div>
       
-  <div class="row-fluid">
-    <div class="widget-box">
-      <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+  
+     
         
+
+
+  </div>
+                  <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+            <h5>Data table</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered data-table">
+              <thead>
+                <tr>
+                  <th>Nombre propiedad</th>
+                  <th>Tipo propiedad</th>
+                  <th>Area</th>
+                  <th>Habitaciones</th>
+                  <th>direccion</th>
+                  <th>ubicacion</th>
+                  <th>img</th>
+                  <th>img2</th>
+                  <th>img3</th>
+                </tr>
+              </thead>
+              <
+                
+                <?php foreach($query as $value): ?>
+                <tr class="gradeX">
+                  <td><?php  echo $value['id_propiedad'];?></td>
+                  <td><?php  echo $value['nombre_prop'];?></td>
+                  <td><?php  echo $value['tipo_propiedad'];?></td>
+                  <td><?php  echo $value['area_terreno'];?></td>
+                  <td><?php  echo $value['total_habitaciones'];?></td>
+                  <td><?php  echo $value['direccion'];?></td>
+                  <td><?php  echo $value['ubicacion'];?></td>
+                  <td><?php  echo $value['img_galeria'];?></td>
+                  <td><?php  echo $value['img_galeria2'];?></td>
+                  <td><?php  echo $value['img_galeria3'];?></td>
+                  <td><a href="<?php echo site_url();?>/Dash_regprop/delete_property?id=<?php  echo $value['id_propiedad'];?>">Delete</a><td>
+                </tr>
+                <?php  endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 <!--Footer-part-->
 <div class="row-fluid">
   <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>

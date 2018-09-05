@@ -132,16 +132,20 @@
                   <th>Apellido</th>
                   <th>Correo</th>
                   <th>Tele</th>
+                  <th>Actualziar</th>
                 </tr>
               </thead>
               <tbody>
                 
                 <?php foreach($query as $value): ?>
                 <tr class="gradeX">
+                  <td><?php  echo $value['id_usuario'];?></td>
                   <td><?php  echo $value['nombre'];?></td>
                   <td><?php  echo $value['apellido'];?></td>
                   <td><?php  echo $value['correo'];?></td>
                   <td><?php  echo $value['telefono'];?></td>
+            <td><a href="<?php echo site_url();?>/Dash_regprop/delete_property?id=<?php  echo $value['id_usuario'];?>">
+            Update</a><td>
                   <td class="center">4</td>
                 </tr>
                 <?php  endforeach; ?>

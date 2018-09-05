@@ -15,6 +15,11 @@ public function show_users()
 	$query=$this->db->get('usuario');
 	return $query->result_array();
 }
+public function show_prop()
+{
+	$query=$this->db->get('propiedades');
+	return $query->result_array();
+}
 }
 
 ?>
