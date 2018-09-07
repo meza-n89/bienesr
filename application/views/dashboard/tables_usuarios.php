@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-media.css" />
 <link href="<?php echo base_url();?>/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 </head>
 <body>
 
@@ -144,8 +145,7 @@
                   <td><?php  echo $value['apellido'];?></td>
                   <td><?php  echo $value['correo'];?></td>
                   <td><?php  echo $value['telefono'];?></td>
-            <td><a href="<?php echo site_url();?>/Dash_regprop/delete_property?id=<?php  echo $value['id_usuario'];?>">
-            Update</a><td>
+            <td><a href="#login-box" class="login-window">update</a><td>
                   <td class="center">4</td>
                 </tr>
                 <?php  endforeach; ?>
@@ -157,6 +157,29 @@
     </div>
   </div>
 </div>
+            <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+              <label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                
+                <button class="submit button" type="button">Sign in</button>
+                
+                <p>
+                <a class="forgot" href="#">Forgot your password?</a>
+                </p>
+                
+                </fieldset>
+          </form>
+    </div>
 <!--Footer-part-->
 <div class="row-fluid">
   <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
@@ -170,5 +193,10 @@
 <script src="<?php echo base_url();?>js/dashboard/jquery.dataTables.min.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/matrix.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/matrix.tables.js"></script>
+<script src="<?php echo base_url();?>js/dashboard/modal.js"></script>
+            
+
+    
+
 </body>
 </html>

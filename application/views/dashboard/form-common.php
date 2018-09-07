@@ -223,7 +223,7 @@
                   <th>img3</th>
                 </tr>
               </thead>
-              <
+              
                 
                 <?php foreach($query as $value): ?>
                 <tr class="gradeX">
@@ -237,7 +237,7 @@
                   <td><?php  echo $value['img_galeria'];?></td>
                   <td><?php  echo $value['img_galeria2'];?></td>
                   <td><?php  echo $value['img_galeria3'];?></td>
-                  <td><a href="<?php echo site_url();?>/Dash_regprop/delete_property?id=<?php  echo $value['id_propiedad'];?>">Delete</a><td>
+                  <td><button id="delete" onclick="denzel('<?php  echo $value['id_propiedad'];?>')" type='button'>Delete</button><td>
                 </tr>
                 <?php  endforeach; ?>
               </tbody>
@@ -265,8 +265,27 @@
 <!--<script src="<?php echo base_url();?>js/dashboard/wysihtml5-0.3.0.js"></script>--> 
 <script src="<?php echo base_url();?>js/dashboard/jquery.peity.min.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/bootstrap-wysihtml5.js"></script> 
-<script>
-	$('.textarea_editor').wysihtml5();
-</script>
+
 </body>
 </html>
+<script>
+  function denzel(id)
+  { 
+    alert('¿Desea borrar esta propiedad ?');
+    var url = "<?php echo site_url();?>/Dash_regprop/delete_property";
+     $.ajax({
+         type:"POST",
+         url:url,
+         data:'id='+id, 
+         success: function(data)
+         {
+            alert(data);
+         }
+
+     });
+
+  }
+</script>
+<script>
+  $('.textarea_editor').wysihtml5();
+</script>

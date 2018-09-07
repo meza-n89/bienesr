@@ -19,6 +19,19 @@ return $this->db->insert('usuario',$data);
 
 
 }
+public funtion update_user()
+{
+	$data= array(
+'nombre'=>$nombrex,
+'apellido' =>$apellidox,
+'correo'=>$emailx,
+'telefono'=>$telefonox,
+'username'=>$usernamex,
+'password'=>$passwordx,
+'rol'=>$rolx
+);
+$this->db->replace('usuario',$data);
+}
 
 
 

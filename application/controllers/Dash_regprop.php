@@ -36,14 +36,21 @@ class Dash_regprop extends CI_controller
 public function delete_property()
 {
 	//$id=echo $value['id_propiedad'];
-	$id=$this->input->get('id');
+	$id=$this->input->post('id');
 	$this->load->model('Model_dashregprop','MoD',true);
-	$this->MoD->delete_propiedad($id);
+	echo $this->MoD->delete_propiedad($id);
+
 }
 public function update_propiedad()
 {
 	
 }
+
+public function llenarTabla()
+{
+	
+}
+
 }
 
 
