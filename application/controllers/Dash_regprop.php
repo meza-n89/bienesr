@@ -32,6 +32,7 @@ class Dash_regprop extends CI_controller
 	'id_usuario'=> NULL
 	);
 	$this->MoD->insert_propiedad($data);
+	$this->load->view('dashboard/form-common');
 }
 public function delete_property()
 {
