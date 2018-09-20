@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/select2.css" />
 <link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-style.css" />
 <link rel="stylesheet" href="<?php echo base_url();?>/css/dashboard/matrix-media.css" />
+
 <link href="<?php echo base_url();?>/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -129,25 +130,29 @@
             <table class="table table-bordered data-table">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
                   <th>Correo</th>
                   <th>Tele</th>
                   <th>Actualziar</th>
+                  <th>Eliminar</th>
+                  <th>Estado</th>
                 </tr>
               </thead>
               <tbody>
                 
                 <?php foreach($query as $value): ?>
                 <tr class="gradeX">
-                  <td><?php  echo $value['id_usuario'];?></td>
+                  <td><?php  echo $value['id_cita'];?></td>
                   <td><?php  echo $value['nombre'];?></td>
                   <td><?php  echo $value['apellido'];?></td>
-                  <td><?php  echo $value['correo'];?></td>
+                  <td><?php  echo $value['email'];?></td>
                   <td><?php  echo $value['telefono'];?></td>
-            <td><a href="#login-box" class="login-window">update</a><td>
-                  <td class="center">4</td>
-                </tr>
+                  <td><?php  echo $value['estado'];?></td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="update_user('<?php echo site_url(); ?>/Dash_userinfo/update_info?id=<?php echo $value['id_cita'];?>')">Update</button></td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="update_user('<?php echo site_url(); ?>/Dash_userinfo/delete_user?id=<?php echo $value['id_cita'];?>')">Eliminar</button></td>
+                 </tr>
                 <?php  endforeach; ?>
               </tbody>
             </table>
@@ -157,29 +162,29 @@
     </div>
   </div>
 </div>
-            <div id="login-box" class="login-popup">
-        <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-          <form method="post" class="signin" action="#">
-                <fieldset class="textbox">
-              <label class="username">
-                <span>Username or email</span>
-                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
-                </label>
-                
-                <label class="password">
-                <span>Password</span>
-                <input id="password" name="password" value="" type="password" placeholder="Password">
-                </label>
-                
-                <button class="submit button" type="button">Sign in</button>
-                
-                <p>
-                <a class="forgot" href="#">Forgot your password?</a>
-                </p>
-                
-                </fieldset>
-          </form>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     
+      </div>
+     
     </div>
+  </div>
+</div>
+
 <!--Footer-part-->
 <div class="row-fluid">
   <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
@@ -193,10 +198,18 @@
 <script src="<?php echo base_url();?>js/dashboard/jquery.dataTables.min.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/matrix.js"></script> 
 <script src="<?php echo base_url();?>js/dashboard/matrix.tables.js"></script>
-<script src="<?php echo base_url();?>js/dashboard/modal.js"></script>
+
             
 
     
 
 </body>
+<script type="text/javascript">
+
+function update_user(dir){
+      $('.modal-body').load(dir, function () {
+           $('#exampleModal').modal({show: true});
+    });
+}
+</script>
 </html>

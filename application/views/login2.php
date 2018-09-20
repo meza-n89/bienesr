@@ -7,16 +7,18 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>css/dashboard/bootstrap.min.css" />
 		<link rel="stylesheet" href="<?php echo base_url();?>css/dashboard/bootstrap-responsive.min.css" />
         <link rel="stylesheet" href="<?php echo base_url();?>css/dashboard/matrix-login.css" />
-        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="<?php echo base_url();?>font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+        <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+        <script src="<?php echo base_url();?>/js/jquery.min.js"></script>
+
 
     </head>
     <body>
         <div id="loginbox">            
             <form id="login-form" class="form-vertical" action="">
-				 <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
+				 <div class="control-group normal_text"> <h3><img src="<?php echo base_url();?>img/logo.png" alt="Logo" /></h3></div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
@@ -52,8 +54,8 @@
             </form>
         </div>
         
-        <script src="js/jquery.min.js"></script>  
-        <script src="js/matrix.login.js"></script> 
+        <!--<script src="js/jquery.min.js"></script>--> 
+        <!--<script src="js/matrix.login.js"></script>--> 
     </body>
 
 </html>

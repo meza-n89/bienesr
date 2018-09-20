@@ -12,7 +12,7 @@ class Model_show extends CI_model
 	}
 public function show_users()
 {
-	$query=$this->db->get('usuario');
+	$query=$this->db->get('cita');
 	return $query->result_array();
 }
 public function show_prop()

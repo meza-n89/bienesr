@@ -9,7 +9,7 @@ class Login extends CI_controller
 		public function dshuser_view(){
 		//if(isset($this->session->set_userdata('id')))
 		
-		
+		$this->load->library('session');
 		$this->load->helper('url');
 		$this->load->view('userdsh/index');
 	
@@ -41,7 +41,9 @@ class Login extends CI_controller
 		$queve=$this->md->Verify_users($username,$password);
 		if(!$queve==0){
 			$this->session->set_userdata('id',$username);
+
 			foreach ($queve as $value) {
+
 				if($value['rol']=='admin')
 				{
 					echo 1;
@@ -50,6 +52,11 @@ class Login extends CI_controller
 					echo 2;
 				}
 			}
+			$this->session->set_userdata('nombre',$value['nombre']);
+			$this->session->set_userdata('apellido',$value['apellido']);
+			$this->session->set_userdata('username',$value['username']);
+			      
+
 			//$this->load->view('gallery');
 			//echo base_url().'dashboard/';
 			//echo 1;

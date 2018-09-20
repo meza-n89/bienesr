@@ -12,9 +12,24 @@ class Dashboard extends CI_controller
 		{
 			redirect('');
 		}
-		$this->load->helper('url');
-		$this->load->view('dashboard/index');
+		//cargar modelo
+		//guardar en variables los totales que quiero en el dashboard
+
+		$this->load->model('Model_total','MT');
+		$dato['totalu']=$this->MT->total_users();
+		//$totalu = count($totalu);
+		$this->load->model('Model_total','MT');
+		$dato['totalcita']=$this->MT->total_citas();
+		//$totalcita= count($totalcita);
+		$this->load->model('Model_total','MT');
+		$dato['totalprop']=$this->MT->total_propiedades();
+
+		$this->load->view('dashboard/index',$dato);//,variable con los totales);
 	}
+
+ 
+
+
 	public function dashboard_view(){
 		$this->load->helper('url');
 		$this->load->view('dashboard/index');

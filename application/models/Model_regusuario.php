@@ -19,21 +19,45 @@ return $this->db->insert('usuario',$data);
 
 
 }
-public funtion update_user()
+public function update_user($id,$nombre,$apellido,$email,$telefono)
 {
-	$data= array(
-'nombre'=>$nombrex,
-'apellido' =>$apellidox,
-'correo'=>$emailx,
-'telefono'=>$telefonox,
-'username'=>$usernamex,
-'password'=>$passwordx,
-'rol'=>$rolx
-);
-$this->db->replace('usuario',$data);
+	/*$data= array(
+'nombre'=> $nombre,
+'apellido'=> $apellido,
+'email'=> $email,
+'telefono'=>$telefono,
+'horario'=> NULL
+);*/
+	$this->db->set('nombre',$nombre);
+	$this->db->set('apellido',$apellido);
+	$this->db->set('email',$email);
+	$this->db->set('telefono',$telefono);
+	//$this->db->set('',$nombre);
+	$this->db->where('id_cita',$id);
+	$laca=$this->db->update('cita');
+	if($laca)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
 }
 
+public function get_user($id){
+$this->db->where('id_cita',$id);
+$result=$this->db->get('cita');
+return $result->result_array();
 
+
+}
+public function delete_user($id)
+{
+	$this->db->where('id_propiedad',$id);
+	$delete=$this->db->delete('usuario');
+	return $delete;
+}
 
 
 

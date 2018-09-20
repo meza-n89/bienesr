@@ -25,7 +25,7 @@
 <!--top-Header-menu-->
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Bienvenido <?php echo $this->session->userdata('nombre'); ?></span><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
         <li class="divider"></li>
@@ -150,9 +150,9 @@
             </div>
             <div class="span3">
               <ul class="site-stats">
-                <li class="bg_lh"><i class="icon-user"></i> <strong>2540</strong> <small>Total Usuarios</small></li>
-                <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>Usuarios capturados</small></li>
-                <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>Total propiedades vendidas</small></li>
+                <li class="bg_lh"><i class="icon-user"></i> <strong> <?php echo $totalu ?> </strong> <small>Total Usuarios</small></li>
+                <li class="bg_lh"><i class="icon-plus"></i> <strong><?php echo $totalcita ?></strong> <small>Usuarios capturados</small></li>
+                <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong><?php echo $totalprop ?></strong> <small>Total propiedades </small></li>
                 <li class="bg_lh"><i class="icon-tag"></i> <strong>9540</strong> <small>Total Orders</small></li>
                 <li class="bg_lh"><i class="icon-repeat"></i> <strong>10</strong> <small>Pending Orders</small></li>
                 <li class="bg_lh"><i class="icon-globe"></i> <strong>8540</strong> <small>Online Orders</small></li>

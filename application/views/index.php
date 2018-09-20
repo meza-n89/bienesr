@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
                         <h3><i class="fa fa-envelope-o grd1 global-radius"></i> HAZ UNA CITA</h3>
-                        <form id="contactform1" class="row" name="contactform" method="post" action="<?php echo site_url();?>/Welcome/add_cita">
+                        <form  class="row"  method="post" action="<?php echo site_url();?>/Welcome/add_cita">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="nombre" id="first_name1" class="form-control" placeholder="Nombre">
@@ -146,15 +146,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="telefono" id="phone1" class="form-control" placeholder="Numero de telefono">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <label class="sr-only">Seleciona un Horario</label>
                                     <select name="horario" id="select_service1" class="selectpicker form-control" data-style="btn-white">
                                         <option value="selecttime">Seleciona un Horario</option>
                                         <option value="Dias de semana">Dias de semana</option>
                                         <option value="Fin de semana">Fin de semana</option>
                                     </select>
+                                    <input type="dat" name="">
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="col-lg-6 col-md-6 col-sm-6 col-xs-12"
+class="col-lg-6 col-md-6 col-sm-6 col-xs-12">fecha de inicio</label>
+                                    <input type="date" name="fecha_ini" id="fecha_ini" class="form-control" placeholder="Fecha de inicio">
                                 </div>
-                        
+                                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="col-lg-6 col-md-6 col-sm-6 col-xs-12"
+class="col-lg-6 col-md-6 col-sm-6 col-xs-12">fecha de Finalizacion</label>
+                                    <input type="date" name="fecha_fin" id="fecha_fin" class="form-control" placeholder="Fecha de inicio">
+                                </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="submit" value="SEND" id="submit1" class="btn btn-light btn-radius btn-brd grd1 btn-block">Obten una cita</button>
                                 </div>

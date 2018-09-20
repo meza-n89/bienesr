@@ -24,6 +24,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 
+	public function getCitas()
+	{
+		$this->load->model('Model_registro','md',true);
+		$result=$this->md->get_cita();
+		echo json_encode($result);
+	}
 	public function add_cita(){
 		$this->load->library('session');
 		$this->load->database();
@@ -35,7 +41,8 @@ class Welcome extends CI_Controller {
 			$this->input->post('apellido'),
 			$this->input->post('email'),
 			$this->input->post('telefono'),
-			$this->input->post('horario')
+			$this->input->post('fecha_ini'),
+			$this->input->post('fecha_fin')
 		);
 		if($x==true)
 		{
@@ -43,7 +50,7 @@ class Welcome extends CI_Controller {
 			0 => 'Su mensaje fue enviado con exito',
            	1 =>true
           );
-        $this->load->library('email');       
+        /*$this->load->library('email');       
         $config['protocol'] = 'smtp';
         $config["smtp_host"] = 'smtp.google.com';
         $config["smtp_user"] = 'skynet.prueba89@gmail.com';
@@ -62,8 +69,8 @@ class Welcome extends CI_Controller {
 		$this->input->post('email'),
 		$this->input->post('telefono'),
 		$this->input->post('horario')
-         );
-         $this->email->send();
+         );*/
+         //$this->email->send();
          //echo var_dump($this->email);
    
          return $this->load->view('index' , compact('mensaje'));
